@@ -1,28 +1,39 @@
-import React, { Component } from 'react';
-import { Text, View,StyleSheet, SafeAreaView, TouchableOpacity,Platform, StatusBar } from 'react-native';
+import React, { Component } from "react";
+import {
+    View,
+    Text,
+    StyleSheet,
+    SafeAreaView,
+    TouchableOpacity,
+    Platform,
+    StatusBar
+} from "react-native";
 
 export default class HomeScreen extends Component {
     render() {
         return (
-            <View
-                style={StyleSheet.container}>
-                    <SafeAreaView style={StyleSheet.droidSafeArea}/>
-                    <View style={styles.titleBar}>
-                <Text style={StyleSheet.titleText}>ISS Tracker App</Text>
+            <View style={styles.container}>
+            <SafeAreaView style={styles.droidSafeArea} />
+            
+                <View style={styles.titleBar}>
+                    <Text style={styles.titleText}>ISS Tracker App</Text>
                 </View>
 
                 <TouchableOpacity style={styles.routeCard}>
-                    <Text style={styles.routeText}>Iss Location</Text>
+                    <Text style={styles.routeText}>ISS Location</Text>
+                    
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.routeCard}>
                     <Text style={styles.routeText}>Meteors</Text>
+            
                 </TouchableOpacity>
-            </View>
+
+        
+        </View>
         )
     }
 }
-
 const styles = StyleSheet.create({
     container: {
         flex: 1
